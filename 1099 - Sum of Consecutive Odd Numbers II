@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int a,b,p,q,s=0;
+        cin>>a>>b;
+        if(a>b)
+        {
+            p=a;
+            q=b+1;
+        }
+        if(a<b)
+        {
+            p=b;
+            q=a+1;
+        }
+        if(a==b)
+        {
+            p=0;q=0;
+        }
+        for(int i=q; i<p; i++)
+        {
+            if(i%2!=0)
+            {
+                s+=i;
+            }
+        }
+        cout<<s<<endl;
+        s=0;
+    }
+    return 0;
+}
