@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int c=0,co=0,m=0,x=1,coo=0,i;
+    while(x==1)
+    {
+        int a,b;
+        cin>>a>>b;
+        if(a>b)
+        {
+            c++;
+        }
+        if(a<b)
+        {
+            co++;
+        }
+        if(a==b)
+        {
+            coo++;
+        }
+        cout<<"Novo grenal (1-sim 2-nao)"<<endl;
+        m++;
+        while(1)
+        {
+            cin>>x;
+            if(x==1 || x==2)
+            {
+                break;
+            }
+        }
+        if(x==2)
+        {
+            cout<<m<<" grenais"<<endl;
+            cout<<"Inter:"<<c<<endl;
+            cout<<"Gremio:"<<co<<endl;
+            cout<<"Empates:"<<coo<<endl;
+            if(c>co && c>coo)
+            {
+                cout<<"Inter venceu mais"<<endl;
+            }
+            if(co>c && co>coo)
+            {
+                cout<<"Gremio venceu mais"<<endl;
+            }
+            if(coo>co && coo>c)
+            {
+                cout<<"Nao houve vencedor"<<endl;
+            }
+            break;
+        }
+    }
+    return 0;
+}
