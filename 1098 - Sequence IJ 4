@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double a,i,p=3;
+    for(i=0,a=1; a<=p; a++)
+    {
+        cout<<"I="<<i<<" J="<<a<<endl;
+        if(a==p)
+        {
+            i+=0.2;
+            a-=3;
+            a+=0.2;
+            p=p+0.2;
+            if(i>2)
+            {
+                break;
+            }
+        }
+    }
+    return 0;
+}
