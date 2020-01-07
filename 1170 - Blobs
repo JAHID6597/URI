@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,t,pt,cnt=0;
+    double avl,av;
+    cin>>t;
+    while(t!=0)
+    {
+        cin>>avl;
+
+        while(avl>1)
+        {
+            avl=avl/2;
+            cnt++;
+
+        }
+        cout<<cnt<<" dias"<<endl;
+        cnt=0;
+        t--;
+    }
+
+}
