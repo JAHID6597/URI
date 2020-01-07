@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+        int i,hr1,min1,hr2,min2,mn1,mn2,s,p,q,r;
+        cin>>hr1>>min1>>hr2>>min2;
+        if(hr1==min1 && hr2==min2 && hr1==min2)
+        {
+            cout<<"O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)"<<endl;
+        }
+        else if(hr1==hr2 && min1>min2)
+        {
+            s=(abs(min1-min2));
+            p=(1440-s);
+            q=p/60;
+            r=p%60;
+            cout<<"O JOGO DUROU "<<q<<" HORA(S) E "<<r<<" MINUTO(S)"<<endl;
+        }
+        else if(hr1==hr2 && min1<min2)
+        {
+            cout<<"O JOGO DUROU "<<0<<" HORA(S) E "<<abs(min2-min1)<<" MINUTO(S)"<<endl;
+        }
+        else if(hr1>hr2)
+        {
+            s=(((24-hr1)+hr2)*60)-abs(min1-min2);
+            p=s/60;
+            q=s%60;
+            cout<<"O JOGO DUROU "<<p<<" HORA(S) E "<<q<<" MINUTO(S)"<<endl;
+        }
+        else
+        {
+            mn1=hr1*60+min1;
+            mn2=hr2*60+min2;
+            s=abs(mn1-mn2);
+            p=s/60;
+            q=s%60;
+            cout<<"O JOGO DUROU "<<p<<" HORA(S) E "<<q<<" MINUTO(S)"<<endl;
+        }
+    
+    return 0;
+}
