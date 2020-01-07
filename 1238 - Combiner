@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,j,k,l,a=0,b;
+    cin>>n;
+    for(i=0; i<n; i++)
+    {
+        char s[50],c[50];
+        cin>>s>>c;
+        k=strlen(s);
+        l=strlen(c);
+        if(k>l)
+        {
+            for(j=0; j<k; j++,b++)
+            {
+                if(c[j]=='\0')
+                {
+                    a++;
+                    b=j;
+                }
+                else if(a==0)
+                {
+                    cout<<s[j]<<c[j];
+                }
+                if(a>0 && b<k)
+                {
+                    cout<<s[b];
+                }
+            }
+        }
+        else if(k<l)
+        {
+            for(j=0; j<l; j++,b++)
+            {
+                if(s[j]=='\0')
+                {
+                    a++;
+                    b=j;
+                }
+                else if(a==0)
+                {
+                    cout<<s[j]<<c[j];
+                }
+                if(a>0 && b<l)
+                {
+                    cout<<c[b];
+                }
+            }
+        }
+        if(k==l)
+        {
+            for(j=0; j<k; j++)
+            {
+                cout<<s[j]<<c[j];
+            }
+        }
+        cout<<endl;
+        a=0;
+    }
+
+    return 0;
+}
+
+
