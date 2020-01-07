@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,s;
+    cin>>t;
+    while(t--)
+    {
+        s=0;
+        string str;
+        cin>>str;
+        for(i=0; i<str.length(); i++)
+        {
+
+            if(str[i]=='1')
+            {
+                s+=2;
+            }
+
+            else if(str[i]=='2' || str[i]=='3' || str[i]=='5')
+            {
+                s+=5;
+            }
+
+            else if(str[i]=='4')
+            {
+                s+=4;
+            }
+
+            else if(str[i]=='6' || str[i]=='9' || str[i]=='0')
+            {
+                s+=6;
+            }
+            else if(str[i]=='7')
+            {
+                s+=3;
+            }
+            else if(str[i]=='8')
+            {
+                s+=7;
+            }
+
+        }
+        cout<<s<<" leds"<<endl;
+    }
+    return 0;
+}
