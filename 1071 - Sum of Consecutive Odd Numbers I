@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,i,s=0,p,q;
+    cin>>a>>b;
+    if(a>b || a==b)
+    {
+        p=a;
+        q=b;
+    }
+    else if(a<b)
+    {
+        p=b;
+        q=a;
+    }
+    if(q%2==0)
+    {
+        q=q+1;
+    }
+    else if(q%2!=0)
+    {
+        q=q+2;
+    }
+    for(i=q; i<p; i+=2)
+    {
+        s+=i;
+    }
+cout<<s<<endl;
+return 0;
+}
+
+
+
+
