@@ -1,0 +1,84 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n1,n2,d1,d2,t,p,q,gc,x,y;
+char r1,r2,c;
+
+void sum()
+{
+    p = (n1*d2 + n2*d1);
+    x = p;
+    q = (d1*d2);
+    y = q;
+    gc = __gcd(p,q);
+    while(gc!=1)
+    {
+        p = p/gc;
+        q = q/gc;
+        gc = __gcd(p,q);
+    }
+    cout<<x<<'/'<<y<<" = "<<p<<'/'<<q<<endl;
+}
+
+void sub()
+{
+    p = (n1*d2 - n2*d1);
+    x = p;
+    q = (d1*d2);
+    y = q;
+    gc = __gcd(p,q);
+    if(gc<0) gc = -gc;
+    while(gc!=1)
+    {
+        p = p/gc;
+        q = q/gc;
+        gc = __gcd(p,q);
+        if(gc<0) gc = -gc;
+    }
+    cout<<x<<'/'<<y<<" = "<<p<<'/'<<q<<endl;
+}
+
+void multi()
+{
+    p = (n1*n2);
+    x = p;
+    q = (d1*d2);
+    y = q;
+    gc = __gcd(p,q);
+    while(gc!=1)
+    {
+        p = p/gc;
+        q = q/gc;
+        gc = __gcd(p,q);
+    }
+    cout<<x<<'/'<<y<<" = "<<p<<'/'<<q<<endl;
+}
+
+void div()
+{
+    p = (n1*d2);
+    x = p;
+    q = (n2*d1);
+    y = q;
+    gc = __gcd(p,q);
+    while(gc!=1)
+    {
+        p = p/gc;
+        q = q/gc;
+        gc = __gcd(p,q);
+    }
+    cout<<x<<'/'<<y<<" = "<<p<<'/'<<q<<endl;
+}
+
+int main()
+{
+    cin>>t;
+    while(t--)
+    {
+        scanf("%d / %d %c %d / %d",&n1,&d1,&c,&n2,&d2);
+        if(c == '+') sum();
+        else if(c == '-') sub();
+        else if(c == '*') multi();
+        else if(c == '/') div();
+    }
+    return 0;
+}
