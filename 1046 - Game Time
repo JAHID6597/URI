@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,a,b,c,s;
+    cin>>a>>b;
+    if(a>b)
+    {
+        c=24-a;
+        s=abs(c+b);
+        cout<<"O JOGO DUROU "<<s<<" HORA(S)"<<endl;
+    }
+    if(a==b)
+        cout<<"O JOGO DUROU 24 HORA(S)"<<endl;
+    if(b>a)
+    {
+        s=abs(b-a);
+        cout<<"O JOGO DUROU "<<s<<" HORA(S)"<<endl;
+    }
+    return 0;
+}
