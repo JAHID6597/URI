@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        double a,b,c;
+        cin>>a>>b;
+        if(b!=0)
+        {
+            c=a/b;
+            printf("%.1lf\n",c);
+        }
+        if(b==0)
+        {
+            cout<<"divisao impossivel"<<endl;
+        }
+
+    }
+    return 0;
+}
