@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,s=0,s1=0,s2=0,s3=0;
+    double p,q,r;
+    cin>>t;
+    int a[t];
+    char c[t];
+    for(int i=0; i<t; i++)
+    {
+        cin>>a[i]>>c[i];
+    }
+    for(int i=0; i<t; i++)
+    {
+        s+=a[i];
+        if(c[i]=='C')
+        {
+            s1+=a[i];
+        }
+        if(c[i]=='R')
+        {
+            s2+=a[i];
+        }
+        if(c[i]=='S')
+        {
+            s3+=a[i];
+        }
+    }
+    p=(double) (s1*100);
+    p=p/s;
+    q=(double) (s2*100);
+    q=q/s;
+    r=(double) (s3*100);
+    r=r/s;
+    cout<<"Total: "<<s<<" cobaias"<<endl;
+    cout<<"Total de coelhos: "<<s1<<endl;
+    cout<<"Total de ratos: "<<s2<<endl;
+    cout<<"Total de sapos: "<<s3<<endl;
+    printf("Percentual de coelhos: %.2lf",p);
+    cout<<" %"<<endl;
+    printf("Percentual de ratos: %.2lf",q);
+    cout<<" %"<<endl;
+    printf("Percentual de sapos: %.2lf",r);
+    cout<<" %"<<endl;
+    return 0;
+}
+
