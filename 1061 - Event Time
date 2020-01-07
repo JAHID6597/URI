@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    char a[4],b[2],c[2],di[4],e[2],f[2];
+    int d1,h1,m1,s1,d2,h2,m2,s2,t,d,h,m,s,p,q;
+    scanf("%s%d%d%s%d%s%d",&a,&d1,&h1,&b,&m1,&c,&s1);
+    scanf("%s%d%d%s%d%s%d",&di,&d2,&h2,&e,&m2,&f,&s2);
+    t=abs((d1*24*3600+h1*3600+m1*60+s1)-(d2*24*3600+h2*3600+m2*60+s2));
+    d=(t/(24*3600));
+    p=t%(24*3600);
+    h=(p/3600);
+    q=p%3600;
+    m=q/60;
+    s=q%60;
+    cout<<d<<" dia(s)"<<endl;
+    cout<<h<<" hora(s)"<<endl;
+    cout<<m<<" minuto(s)"<<endl;
+    cout<<s<<" segundo(s)"<<endl;
+}
