@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,i,p,q,s=0;
+    cin>>a>>b;
+    if(a>b)
+    {
+        p=a;
+        q=b;
+    }
+    if(a<b)
+    {
+        p=b;
+        q=a;
+    }
+    for(i=q+1; i<p; i++)
+    {
+        if(i%5==2)
+        {
+            cout<<i<<endl;
+        }
+        if(i%5==3)
+        {
+            cout<<i<<endl;
+        }
+
+    }
+    return 0;
+}
