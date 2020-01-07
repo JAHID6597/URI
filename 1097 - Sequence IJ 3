@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,j,p=7,q;
+    for(i=1,j=7; i<=9; j--)
+    {
+        if((p-j)==3)
+        {
+            i+=2;
+            j=p+2;
+            p=j;
+        }
+        if(i==9 && j==13)
+        {
+            cout<<"I="<<i<<" J="<<j<<endl;
+            break;
+        }
+        cout<<"I="<<i<<" J="<<j<<endl;
+    }
+    return 0;
+}
