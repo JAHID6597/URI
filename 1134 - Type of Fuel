@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int c1=0,c2=0,c3=0;
+    while(1)
+    {
+        int a;
+        cin>>a;
+        if(a==1)
+        {
+            c1++;
+        }
+        else if(a==2)
+        {
+            c2++;
+        }
+        else if(a==3)
+        {
+            c3++;
+        }
+        else if(a==4)
+        {
+            cout<<"MUITO OBRIGADO"<<endl;
+            cout<<"Alcool: "<<c1<<endl;
+            cout<<"Gasolina: "<<c2<<endl;
+            cout<<"Diesel: "<<c3<<endl;
+            break;
+        }
+    }
+    return 0;
+}
