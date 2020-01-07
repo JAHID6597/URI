@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int c=0;
+    double a,b,q,s=0;
+    while(1)
+    {
+        cin>>a;
+        if(a<0 || a>10 )
+        {
+            cout<<"nota invalida"<<endl;
+
+        }
+        if(a>=0 && a<=10)
+        {
+            s+=a;
+            c++;
+        }
+        if(c==2)
+        {
+            q=(s/2.00);
+            printf("media = %.2lf\n",q);
+            break;
+        }
+
+
+    }
+    return 0;
+
+}
