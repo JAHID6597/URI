@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double price,p;
+    cin>>price;
+    if(price>=0.00 && price<=2000.00)
+    {
+        cout<<"Isento"<<endl;
+    }
+    else if(price>=2000.01 && price<=3000.00)
+    {
+        p=((price-2000.00)*0.08);
+        printf("R$ %.2lf\n",p);
+    }
+    else if(price>=3000.01 && price<=4500.00)
+    {
+        p=80+((price-3000.01)*0.18);
+        printf("R$ %.2lf\n",p);
+    }
+    else if(price>4500.00)
+    {
+        p=350+((price-4500)*0.28);
+        printf("R$ %.2lf\n",p);
+    }
+    return 0;
+}
