@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,c=0;
+    double a[5],s=0,avg;
+    for(i=0; i<6; i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0; i<6; i++)
+    {
+        if(a[i]>0)
+        {
+            s+=a[i];
+            c++;
+        }
+    }
+    avg=s/c;
+    cout<<c<<" valores positivos"<<endl;
+    printf("%.1lf\n",avg);
+    return 0;
+}
