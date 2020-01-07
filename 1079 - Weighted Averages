@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i;
+    cin>>n;
+    while(n--)
+    {
+        double a,b,c,p;
+        cin>>a>>b>>c;
+        p=((a*2+b*3+c*5)/(10));
+        printf("%.1lf\n",p);
+    }
+    return 0;
+}
+
+
+
+
