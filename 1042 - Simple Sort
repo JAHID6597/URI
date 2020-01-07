@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[3],i=0,j,t,k=0,p[3];
+    for(i=0; i<3; i++)
+    {
+        cin>>a[i];
+        p[i]=a[i];
+    }
+    for(i=0; i<3; i++)
+    {
+        for(j=i+1; j<3; j++)
+        {
+
+            if(a[i]>a[j])
+            {
+                t=a[i];
+                a[i]=a[j];
+                a[j]=t;
+            }
+        }
+        cout<<a[i]<<endl;
+    }
+    cout<<endl;
+    for(i=0; i<3; i++)
+    {
+        cout<<p[i]<<endl;
+    }
+    return 0;
+}
+
+
