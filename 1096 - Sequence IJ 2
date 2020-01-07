@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,j;
+    for(i=1,j=7; i<=9; j--)
+    {
+        if(j==4)
+        {
+            i+=2;
+            j=7;
+        }
+        if(i==9 && j==5)
+        {
+            cout<<"I="<<i<<" J="<<j<<endl;
+            break;
+        }
+        cout<<"I="<<i<<" J="<<j<<endl;
+    }
+    return 0;
+}
