@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,m,j,l,n,x,p;
+    string str1,str2,str3;
+    cin>>t;
+    cin.get();
+    for(int k=0; k<t; k++)
+    {
+
+        getline(cin,str1);
+        l=str1.length();
+        reverse(str1.begin(),str1.end());
+        for(i=0; i<l; i++)
+        {
+            if(str1[i]>='A' && str1[i]<='Z' || str1[i]>='a' && str1[i]<='z')
+            {
+                str2[i]=str1[i]+3;
+            }
+            else
+            {
+                str2[i]=str1[i];
+            }
+        }
+        for(i=l/2; i<l; i++)
+        {
+            str2[i]=str2[i]-1;
+        }
+        for(i=0; i<l/2; i++)
+        {
+            cout<<str2[i];
+        }
+        for(i=l/2; i<l; i++)
+        {
+            cout<<str2[i];
+        }
+
+    cout<<endl;
+    }
+    return 0;
+}
+
+
+
+
