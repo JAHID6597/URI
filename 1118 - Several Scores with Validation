@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int c=0,x=1,i;
+    while(x==1)
+    {
+        double a[2],p;
+        for(i=0; i<2;)
+        {
+            cin>>a[i];
+            if(a[i]<0 || a[i]>10)
+            {
+                cout<<"nota invalida"<<endl;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        p=((a[0]+a[1])/2);
+        printf("media = %.2lf\n",p);
+        cout<<"novo calculo (1-sim 2-nao)"<<endl;
+
+        while(1)
+        {
+            cin>>x;
+            if(x!=1 && x!=2)
+            {
+                cout<<"novo calculo (1-sim 2-nao)"<<endl;
+            }
+            else
+            {
+                break;
+            }
+        }
+        if(x==2)
+        {
+            break;
+        }
+    }
+    return 0;
+}
