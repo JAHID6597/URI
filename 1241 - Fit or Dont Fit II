@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int len=0,x=0,m=0,p=0;
+        string s1,s2,s;
+        cin>>s1>>s2;
+        cin.ignore();
+        if(s1==s2)
+        {
+            cout<<"encaixa"<<endl;
+        }
+        else if(s1.length()>s2.length())
+        {
+            len=s1.length();
+            m=s2.length();
+            p=len-m;
+            s=s1.substr(p,m);
+            if(s==s2)
+                cout<<"encaixa"<<endl;
+            else
+                cout<<"nao encaixa"<<endl;
+        }
+        else
+        {
+            cout<<"nao encaixa"<<endl;
+        }
+    }
+    return 0;
+}
