@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int c=-1;
+int fibo(int n)
+{
+    c++;
+    if(n==0)
+        return 0;
+    else if(n==1)
+        return 1;
+    else
+        return fibo(n-1)+fibo(n-2);
+}
+int main()
+{
+    int t,n;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        cout<<"fib("<<n<<") = "<<c<<" calls = "<<fibo(n)<<endl;
+        c=-1;
+    }
+    return 0;
+}
