@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    string s;
+    list<char> li;
+    list<char>::iterator it;
+    while(cin>>s)
+    {
+        li.clear();
+        it=li.begin();
+
+        for(int i=0;i<s.length();i++)
+        {
+            if(s[i]=='[') it=li.begin();
+            else if(s[i]==']') it=li.end();
+            else{
+                li.insert(it,s[i]);
+            }
+        }
+
+        for(it=li.begin();it!=li.end();it++)
+        {
+            cout<<*it;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
