@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool sort_str(string p,string q)
+{
+    return p.length()>q.length();
+}
+
+int main()
+{
+    //freopen("C:/Users/ANWER/Desktop/input.txt","r",stdin);
+    int t;
+    cin>>t;
+    cin.ignore();
+    while(t--)
+    {
+        string s,str_arr[50];
+        getline(cin,s);
+        int c=0,i,j,len,p;
+        len = s.length();
+        for(i=0,p=0; i<len; i++)
+        {
+            if(s[i] == ' ')
+            {
+                str_arr[c]=s.substr(p,i-p);
+                p=i+1;
+                c++;
+            }
+        }
+        str_arr[c]=s.substr(p,i-p);
+        c++;
+
+        stable_sort(str_arr,str_arr+c,sort_str);
+
+        for(i=0; i<c-1; i++)
+        {
+            cout<<str_arr[i]<<" ";
+        }
+        cout<<str_arr[i];
+        cout<<endl;
+
+
+    }
+    return 0;
+}
