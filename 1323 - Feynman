@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//#define debug
+
+int main()
+{
+
+#ifdef debug
+    freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+#endif
+
+    int n=1,cal=0;
+    while(n!=0)
+    {
+        cin>>n;
+        if(n==0)break;
+        for(int i=1;i<=n;i++)
+        {
+            cal=cal+i*i;
+        }
+        cout<<cal<<endl;
+        cal=0;
+    }
+    return 0;
+}
