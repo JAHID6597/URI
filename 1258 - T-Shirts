@@ -1,0 +1,103 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//#define debug
+
+int main()
+{
+
+#ifdef debug
+    freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+#endif
+    int t=1,n=0;
+    while(t!=0)
+    {
+        int cb=0,cv=0;
+        n++;
+        cin>>t;if(t==0)break;
+        cin.get();
+        if(n>1)cout<<endl;
+        string ns,ss,rs,ts,P,M,G,es,p,m,g;
+        vector<string> v,vp,vm,vg,vv,um,ug,up;
+        vector<string>::iterator it,tt;
+
+        for(int i=0; i<t; i++)
+        {
+            getline(cin,ns);
+            getline(cin,ss);
+            rs = ss+" "+ns;
+            v.push_back(rs);
+        }
+
+        sort(v.begin(),v.end());
+
+        for(it=v.begin(); it!=v.end(); it++)
+        {
+            ts=*it;
+            P="branco P ";
+            M="branco M ";
+            G="branco G ";
+            es=ts.substr(0,9);
+            if(P==es)
+            {
+                vp.push_back(ts);
+            }
+            else if(M==es)
+            {
+                vm.push_back(ts);
+            }
+            else if(G==es)
+            {
+                vg.push_back(ts);
+            }
+        }
+
+        for(it=v.begin(); it!=v.end(); it++)
+        {
+            ts=*it;
+            p="vermelho P ";
+            m="vermelho M ";
+            g="vermelho G ";
+            es=ts.substr(0,11);
+            if(p==es)
+            {
+                up.push_back(ts);
+            }
+            else if(m==es)
+            {
+                um.push_back(ts);
+            }
+            else if(g==es)
+            {
+                ug.push_back(ts);
+            }
+        }
+
+        for(it=vp.begin(); it!=vp.end(); it++)
+        {
+            cout<<*it<<endl;
+        }
+        for(it=vm.begin(); it!=vm.end(); it++)
+        {
+            cout<<*it<<endl;
+        }
+        for(it=vg.begin(); it!=vg.end(); it++)
+        {
+            cout<<*it<<endl;
+        }
+
+        for(it=up.begin(); it!=up.end(); it++)
+        {
+            cout<<*it<<endl;
+        }
+        for(it=um.begin(); it!=um.end(); it++)
+        {
+            cout<<*it<<endl;
+        }
+        for(it=ug.begin(); it!=ug.end(); it++)
+        {
+            cout<<*it<<endl;
+        }
+    }
+    return 0;
+}
