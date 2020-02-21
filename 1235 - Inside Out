@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//#define debug
+
+int main()
+{
+
+#ifdef debug
+    freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+#endif
+    int t;
+    cin>>t;
+    cin.get();
+    while(t--)
+    {
+        string s;
+        getline(cin,s);
+        int len,mid;
+        len = s.length();
+        mid = len/2;
+        reverse(s.begin(),s.begin()+mid);
+        reverse(s.begin()+mid,s.end());
+        cout<<s<<endl;
+    }
+    return 0;
+}
