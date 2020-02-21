@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//#define debug
+
+int main()
+{
+
+#ifdef debug
+    freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+#endif
+
+    int x,y,n,j=1;
+    cin>>x>>y;
+    n=y;
+    y=y/x;
+    while(y-- && j!=n)
+    {
+        for(int i=1;i<x;i++)
+        {
+            cout<<j<<" ";
+            j++;
+        }
+        cout<<j;
+            j++;
+        cout<<endl;
+    }
+    return 0;
+}
