@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//#define debug
+
+int main()
+{
+
+#ifdef debug
+    freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+#endif
+
+int c=0;
+    while(1)
+    {
+        int t,len,mx_len=0,n;
+        c++;
+        cin>>t;
+        if(t==0)
+            break;
+        cin.get();
+        if(c>1)
+            cout<<endl;
+        n=t;
+        vector<string> v;
+        while(n--)
+        {
+            string s;
+            cin>>s;
+            len = s.length();
+            v.push_back(s);
+            if(len>mx_len)
+                mx_len=len;
+        }
+        for(int i=0; i<t; i++)
+        {
+            cout.width(mx_len);
+            cout <<right <<v[i]<<endl;
+        }
+    }
+    return 0;
+}
